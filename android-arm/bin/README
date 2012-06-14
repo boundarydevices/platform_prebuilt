@@ -1,0 +1,11 @@
+
+busybox
+-------
+The source code is under external/busybox with GPLv2 license.
+As it does not compatible with bionic c library, but using
+glibc, please use the makefile to build for static binary,
+and use the freescale released toolchain:
+
+$cd external/busybox
+$cp debian/config/static .config
+$make CROSS_COMPILE=arm-none-linux-gnueabi-
